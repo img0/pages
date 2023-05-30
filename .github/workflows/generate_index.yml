@@ -1,5 +1,6 @@
 name: 动态更新index文件
 on:
+  workflow_dispatch:
   push:
     branches:
       - nil
