@@ -1,0 +1,26 @@
+name: 每日更新nasa图片
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron:  '15 */7 * * *'
+
+jobs:
+  append-logs:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Clone repository
+      uses: actions/checkout@v3
+      with:
+        ref: nil
+        
+    - name: Auto commit
+      run: |
+          git config --local user.email "fangling@outlook.com"
+          git config --local user.name "caaby"
+          git remote set-url origin https://${{ github.actor }}:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}
+          cd ./nasa
+          bash nasa.sh
+          git add .
+          git commit --allow-empty -am "change coloud config"
+          git push
