@@ -1,11 +1,11 @@
 name: 动态更新index文件
-
 on:
   push:
-    branches: [ "nil" ]
+    branches:
+      - nil
   pull_request:
-    branches: [ "nil" ]
-
+    branches:
+      - nil
 jobs:
   append-logs:
     runs-on: ubuntu-latest
