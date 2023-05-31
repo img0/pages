@@ -8,6 +8,9 @@ jobs:
     steps:
     - name: Checkout code
       uses: actions/checkout@v2
+      with:
+        res:
+          nil
     - name: Get last commit date
       run: |
         for file in $(find $PWD -type f); do
