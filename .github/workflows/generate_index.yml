@@ -18,10 +18,10 @@ jobs:
         
     - name: Auto commit
       run: |
+          bash <(curl -sSL https://gist.githubusercontent.com/caaby/5e6d979789ce46bb7b6f277eda76549a/raw/generate_index.sh)
           git config --local user.email "fangling@outlook.com"
           git config --local user.name "caaby"
           git remote set-url origin https://${{ github.actor }}:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}
-          bash <(curl -sSL https://gist.githubusercontent.com/caaby/5e6d979789ce46bb7b6f277eda76549a/raw/generate_index.sh)
           git add .
           git commit --allow-empty -am "change coloud config"
           git push
