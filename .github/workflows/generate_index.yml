@@ -18,6 +18,8 @@ jobs:
         
     - name: Auto commit
       run: |
+          sudo ln -sf /usr/share/zoneinfo/Asia/Shanghai /etc/localtime
+          echo "Asia/Shanghai" | sudo tee /etc/timezone
           bash <(curl -sSL https://gist.githubusercontent.com/caaby/5e6d979789ce46bb7b6f277eda76549a/raw/generate_index.sh)
           git config --local user.email "fangling@outlook.com"
           git config --local user.name "caaby"
