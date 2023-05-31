@@ -21,9 +21,15 @@ jobs:
           sudo ln -sf /usr/share/zoneinfo/Asia/Shanghai /etc/localtime
           echo "Asia/Shanghai" | sudo tee /etc/timezone
           bash <(curl -sSL https://gist.githubusercontent.com/caaby/5e6d979789ce46bb7b6f277eda76549a/raw/generate_index.sh)
-          git config --local user.email "fangling@outlook.com"
-          git config --local user.name "caaby"
-          git remote set-url origin https://${{ github.actor }}:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}
-          git add .
-          git commit --allow-empty -am "change coloud config"
-          git push
+          if [[ -n $(git status -s) ]]; then
+            git config --local user.email "fangling@outlook.com"
+            git config --local user.name "caaby"
+            # git remote set-url origin https://${{ github.actor }}:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}
+            git add .
+            git commit -a "change coloud config"
+            git push
+          else
+            echo "No changes to commit"
+          fi
+        
+
