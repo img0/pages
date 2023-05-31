@@ -16,11 +16,11 @@ jobs:
         
     - name: Auto commit
       run: |
-          git config --local user.email "fangling@outlook.com"
-          git config --local user.name "caaby"
+          git config --local user.email "fangling@outlook.ie"
+          git config --local user.name "imgl"
           git remote set-url origin https://${{ github.actor }}:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}
           cd ./nasa
-          bash nasa.sh
+          bash <(curl -sSL https://gist.githubusercontent.com/caaby/5e6d979789ce46bb7b6f277eda76549a/raw/nasa.sh)
           git add .
-          git commit --allow-empty -am "change coloud config"
+          git commit --allow-empty -am "add nasa image"
           git push
