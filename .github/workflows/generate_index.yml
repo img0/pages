@@ -8,10 +8,10 @@ on:
     branches:
       - nil
 jobs:
-  append-logs:
+  update-index-html:
     runs-on: ubuntu-latest
     steps:
-    - name: Clone repository
+    - name: Checkout code
       uses: actions/checkout@v3
       with:
         ref: nil
