@@ -9,7 +9,7 @@ jobs:
     - name: Checkout code
       uses: actions/checkout@v2
       with:
-        res:
+        ref:
           nil
     - name: Get last commit date
       run: |
