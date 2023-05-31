@@ -3,14 +3,24 @@
     <head>
         <meta name="viewport" content="width=device-width, initial-scale=1" charset="UTF-8">
         <style>
-            table {
-                border-collapse: collapse;
-                width: 100%;
-                max-width: 1200px;
-                margin: 0 auto;
-                overflow-x: auto;
-                table-layout: auto;
-            }
+
+        .container {
+            padding: 0 16px;
+            max-width: calc(100% - 32px);
+            overflow-x: auto;
+        }
+
+        table {
+            width: 100%;
+        }
+            # table {
+            #     border-collapse: collapse;
+            #     width: 100%;
+            #     max-width: 1200px;
+            #     margin: 0 auto;
+            #     overflow-x: auto;
+            #     table-layout: auto;
+            # }
 
             th, td {
                 padding: 8px;
@@ -25,17 +35,18 @@
         <title>/</title>
     </head>
     <body>
-    <table>
-        <h1>index of /</h1>
-        <tr>
-            <th>文件名</th>
-            <th>文件大小</th>
-            <th>最后更新时间</th>
-        </tr> 
-<tr><td><a href='1.txt'>1.txt</a></td><td>4.0K</td><td>2023-05-31 02:14:13</td></tr>
-<tr><td><a href='WechatIMG1.jpeg'>WechatIMG1.jpeg</a></td><td>76K</td><td>2023-05-31 02:14:13</td></tr>
-<tr><td><a href='gsap.min.js'>gsap.min.js</a></td><td>60K</td><td>2023-05-31 02:14:13</td></tr>
-<tr><td><a href='m'>m</a></td><td>1.5M</td><td>2023-05-31 02:14:13</td></tr>
-<tr><td><a href='nasa'>nasa</a></td><td>548K</td><td>2023-05-31 02:14:13</td></tr>
-<tr><td><a href='phone'>phone</a></td><td>856K</td><td>2023-05-31 02:14:13</td></tr>
-</table></body></html>
+        <div class="container">
+            <h1>index of /"</h1>
+            <table>
+                <tr>
+                    <th>文件名</th>
+                    <th>文件大小</th>
+                    <th>最后更新时间</th>
+                </tr> 
+<tr><td><a href='1.txt'>1.txt</a></td><td>4.0K</td><td>2023-05-31 02:21:06</td></tr>
+<tr><td><a href='WechatIMG1.jpeg'>WechatIMG1.jpeg</a></td><td>76K</td><td>2023-05-31 02:21:06</td></tr>
+<tr><td><a href='gsap.min.js'>gsap.min.js</a></td><td>60K</td><td>2023-05-31 02:21:06</td></tr>
+<tr><td><a href='m'>m</a></td><td>1.5M</td><td>2023-05-31 02:21:06</td></tr>
+<tr><td><a href='nasa'>nasa</a></td><td>548K</td><td>2023-05-31 02:21:06</td></tr>
+<tr><td><a href='phone'>phone</a></td><td>856K</td><td>2023-05-31 02:21:06</td></tr>
+</table></div></body></html>
