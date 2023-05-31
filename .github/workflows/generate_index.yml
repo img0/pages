@@ -26,7 +26,7 @@ jobs:
             git config --local user.name "caaby"
             # git remote set-url origin https://${{ github.actor }}:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}
             git add .
-            git commit -a "change coloud config"
+            git commit -am "change coloud config"
             git push
           else
             echo "No changes to commit"
