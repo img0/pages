@@ -20,8 +20,7 @@ jobs:
           git config --local user.name "imgl"
           git remote set-url origin https://${{ github.actor }}:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}
           cd ./nasa
-          #bash <(curl -sSL https://gist.githubusercontent.com/caaby/5e6d979789ce46bb7b6f277eda76549a/raw/nasa.sh)
-          curl -sSf https://gist.githubusercontent.com/caaby/5e6d979789ce46bb7b6f277eda76549a/raw/nasa.sh | sh
+          bash <(curl -sSL https://gist.githubusercontent.com/caaby/5e6d979789ce46bb7b6f277eda76549a/raw/nasa.sh)
           git add .
           git commit --allow-empty -am "add nasa image"
           git push
