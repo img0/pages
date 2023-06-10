@@ -6,7 +6,7 @@ on:
     - cron:  '15 10 * * *'
 
 jobs:
-  append-logs:
+  add-nasa:
     runs-on: ubuntu-latest
     steps:
     - name: Clone repository
