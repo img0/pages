@@ -19,10 +19,10 @@ jobs:
           git config --local user.email "fangling@outlook.ie"
           git config --local user.name "imgl"
           git remote set-url origin https://${{ github.actor }}:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}
-          cd ./nasa
           
     - name: Execute shell
       run: |
+          cd ./nasa
           bash <(curl -sSL https://gist.githubusercontent.com/caaby/5e6d979789ce46bb7b6f277eda76549a/raw/nasa.sh)
     
     - name: commit
