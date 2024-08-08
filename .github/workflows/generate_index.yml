@@ -2,8 +2,12 @@ name: 动态更新index文件
 
 on:
   push:
-    branches:
-      - nil
+  pull_request:
+  
+# on:
+#   push:
+#     branches:
+#       - nil
 # on:
 #   workflow_dispatch:
 #   schedule:
