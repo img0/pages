@@ -1,8 +1,13 @@
 name: 动态更新index文件
+
 on:
-  workflow_dispatch:
-  schedule:
-    - cron:  '10 */2 * * *'
+  push:
+    branches:
+      - nil
+# on:
+#   workflow_dispatch:
+#   schedule:
+#     - cron:  '10 */2 * * *'
 jobs:
   update-index-html:
     runs-on: ubuntu-latest
