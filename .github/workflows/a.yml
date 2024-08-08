@@ -16,7 +16,7 @@ jobs:
 
     - name: Auto commit
       run: |  
-          mv -f *.jpg ./nasa
+          mv -f *.png ./nasa
           if [[ -n $(git status -s) ]]; then
             git config --local user.email "fangling@outlook.com"
             git config --local user.name "caaby"
